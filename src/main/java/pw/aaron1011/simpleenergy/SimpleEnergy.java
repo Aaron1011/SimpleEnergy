@@ -1,9 +1,12 @@
 package pw.aaron1011.simpleenergy;
 
 import net.minecraft.block.Block;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -53,7 +56,10 @@ public class SimpleEnergy {
         /** Listen for the register event for creating custom items */
         @SubscribeEvent
         public static void addItems(RegistryEvent.Register<Item> event) {
-            event.getRegistry().register(new ItemBlock(Blocks.creativeEnergy).setRegistryName(Blocks.creativeEnergy.getRegistryName()).setHasSubtypes(false).setMaxDamage(0));
+            Items.init();
+            event.getRegistry().register(Items.creativeEnergy);
+
+            ModelLoader.setCustomModelResourceLocation(Items.creativeEnergy, 0, new ModelResourceLocation(Items.creativeEnergy.getRegistryName(), "inventory"));
         }
     }
 }
