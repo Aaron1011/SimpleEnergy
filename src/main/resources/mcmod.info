@@ -1,0 +1,20 @@
+[
+  {
+    "modid": "simpleenergy",
+    "name": "SimpleEnergy",
+    "description": "Provides some simple blocks that act as Forge energy sources",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [
+      "Aaron1011"
+    ],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": [
+      ""
+    ]
+  }
+]
