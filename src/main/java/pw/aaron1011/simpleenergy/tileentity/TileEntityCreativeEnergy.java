@@ -35,7 +35,7 @@ public class TileEntityCreativeEnergy extends TileEntity implements ITickable {
             for(EnumFacing side : EnumFacing.values()){
                 EnumFacing opposite = side.getOpposite();
                 TileEntity tile = this.world.getTileEntity(this.pos.offset(side));
-                if(tile != null) {
+                if(tile != null && !(tile instanceof TileEntityCreativeEnergy)) {
                     if (tile.hasCapability(CapabilityEnergy.ENERGY, side)) {
                         tile.getCapability(CapabilityEnergy.ENERGY, side).receiveEnergy(Integer.MAX_VALUE, false);
                     }
