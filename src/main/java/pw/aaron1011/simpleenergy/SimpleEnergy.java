@@ -3,13 +3,16 @@ package pw.aaron1011.simpleenergy;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import pw.aaron1011.simpleenergy.block.Blocks;
+import pw.aaron1011.simpleenergy.tileentity.TileEntityCreativeEnergy;
 
 @Mod(
         modid = SimpleEnergy.MOD_ID,
@@ -35,6 +38,7 @@ public class SimpleEnergy {
     @Mod.EventHandler
     public void preinit(FMLPreInitializationEvent event) {
         LOGGER.info("Pre-init!");
+        GameRegistry.registerTileEntity(TileEntityCreativeEnergy.class, MOD_ID + "." + "TECreativeEnergy");
     }
 
     @Mod.EventBusSubscriber
@@ -49,7 +53,7 @@ public class SimpleEnergy {
         /** Listen for the register event for creating custom items */
         @SubscribeEvent
         public static void addItems(RegistryEvent.Register<Item> event) {
-            event.getRegistry().register(new ItemBlock(Blocks.creativeEnergy).setRegistryName(MOD_ID, "creative_energy"));
+            event.getRegistry().register(new ItemBlock(Blocks.creativeEnergy).setRegistryName(Blocks.creativeEnergy.getRegistryName()).setHasSubtypes(false).setMaxDamage(0));
         }
     }
 }

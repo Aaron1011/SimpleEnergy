@@ -3,6 +3,7 @@ package pw.aaron1011.simpleenergy.block;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import pw.aaron1011.simpleenergy.SimpleEnergy;
@@ -16,6 +17,8 @@ public class BlockCreativeEnergy extends Block implements ITileEntityProvider {
         super(Material.ROCK);
         this.setUnlocalizedName(SimpleEnergy.MOD_ID + "." + "creative_energy");
         this.setRegistryName(SimpleEnergy.MOD_ID, "creative_energy");
+        this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
+        this.setBlockUnbreakable();
     }
 
     @Nullable
