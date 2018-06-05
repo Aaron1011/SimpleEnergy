@@ -19,6 +19,7 @@ public class TileEntityCreativeEnergy extends TileEntity implements ITickable {
         return capability == CapabilityEnergy.ENERGY;
     }
 
+    @SuppressWarnings("unchecked")
     @Override
     @Nullable
     public <T> T getCapability(Capability<T> capability, @Nullable EnumFacing facing)
