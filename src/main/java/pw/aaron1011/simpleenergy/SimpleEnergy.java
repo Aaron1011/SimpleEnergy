@@ -30,17 +30,11 @@ public class SimpleEnergy {
 
     public static Logger LOGGER = LogManager.getLogger(MOD_ID);
 
-    /** This is the instance of your mod as created by Forge. It will never be null. */
     @Mod.Instance(MOD_ID)
     public static SimpleEnergy INSTANCE;
 
-    /**
-     * This is the first initialization event. Register tile entities here.
-     * The registry events below will have fired prior to entry to this method.
-     */
     @Mod.EventHandler
     public void preinit(FMLPreInitializationEvent event) {
-        LOGGER.info("Pre-init!");
         GameRegistry.registerTileEntity(TileEntityCreativeEnergy.class, MOD_ID + "." + "TECreativeEnergy");
     }
 
@@ -49,17 +43,12 @@ public class SimpleEnergy {
 
         @SubscribeEvent
         public static void addBlocks(RegistryEvent.Register<Block> event) {
-            Blocks.init();
-            event.getRegistry().register(Blocks.creativeEnergy);
+            Blocks.init(event.getRegistry());
         }
 
-        /** Listen for the register event for creating custom items */
         @SubscribeEvent
         public static void addItems(RegistryEvent.Register<Item> event) {
-            Items.init();
-            event.getRegistry().register(Items.creativeEnergy);
-
-            ModelLoader.setCustomModelResourceLocation(Items.creativeEnergy, 0, new ModelResourceLocation(Items.creativeEnergy.getRegistryName(), "inventory"));
+            Items.init(event.getRegistry());
         }
     }
 }
