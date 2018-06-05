@@ -26,7 +26,7 @@ public class SimpleEnergy {
 
     public static final String MOD_ID = "simpleenergy";
     public static final String MOD_NAME = "SimpleEnergy";
-    public static final String VERSION = "1.0-SNAPSHOT";
+    public static final String VERSION = "@VERSION@";
 
     public static Logger LOGGER = LogManager.getLogger(MOD_ID);
 
