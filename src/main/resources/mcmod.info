@@ -5,7 +5,7 @@
     "description": "Provides some simple blocks that act as Forge energy sources",
     "version": "${version}",
     "mcversion": "${mcversion}",
-    "url": "",
+    "url": "https://github.com/Aaron1011/SimpleEnergy",
     "updateUrl": "",
     "authorList": [
       "Aaron1011"
@@ -13,8 +13,6 @@
     "credits": "",
     "logoFile": "",
     "screenshots": [],
-    "dependencies": [
-      ""
-    ]
+    "dependencies": []
   }
 ]
