@@ -8,3 +8,12 @@ SimpleEnergy currently contains the current blocks:
 | ID | Description |
 |----|-------------|
 |simpleenergy:creative_energy|Provides an infinite source of energy to all neighboring blocks. Only available in Creative mode.|
+
+
+-------
+
+## Screenshots:
+
+Creative energy block and item:
+
+![Creative energy block and item](/screenshots/screenshot_creative_energy.png)
