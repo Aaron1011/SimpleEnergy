@@ -1,4 +1,4 @@
-# SimpleEnergy
+![Simple Energy](/src/main/resources/assets/simpleenergy/textures/simpleenergy_logo.png)
 
 SimpleEnergy is a Minecraft mod which provides various energy-related blocks.
 It should be compatible with any mod that uses the Forge energy API.
