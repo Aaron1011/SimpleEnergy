@@ -40,7 +40,7 @@ public class SimpleEnergy {
 
     @Mod.EventHandler
     public void preinit(FMLPreInitializationEvent event) {
-        GameRegistry.registerTileEntity(TileEntityCreativeEnergy.class, MOD_ID + "." + "TECreativeEnergy");
+        GameRegistry.registerTileEntity(TileEntityCreativeEnergy.class, MOD_ID + ":" + "TECreativeEnergy");
     }
 
     @Mod.EventBusSubscriber
