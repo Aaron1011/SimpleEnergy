@@ -1,5 +1,7 @@
 ![Simple Energy](/src/main/resources/assets/simpleenergy/textures/simpleenergy_logo.png)
 
+[![Build Status](https://travis-ci.org/Aaron1011/SimpleEnergy.svg?branch=master)](https://travis-ci.org/Aaron1011/SimpleEnergy) ![Curse Forge Downloads](http://cf.way2muchnoise.eu/simpleenergy.svg) ![CurseForge versions](http://cf.way2muchnoise.eu/versions/simpleenergy.svg)
+
 SimpleEnergy is a Minecraft mod which provides various energy-related blocks.
 It should be compatible with any mod that uses the Forge energy API.
 
