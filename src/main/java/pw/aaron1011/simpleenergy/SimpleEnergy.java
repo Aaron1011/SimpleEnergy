@@ -9,12 +9,14 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import pw.aaron1011.simpleenergy.block.Blocks;
+import pw.aaron1011.simpleenergy.proxy.Proxy;
 import pw.aaron1011.simpleenergy.tileentity.TileEntityCreativeEnergy;
 
 @Mod(
@@ -29,6 +31,9 @@ public class SimpleEnergy {
     public static final String VERSION = "@VERSION@";
 
     public static Logger LOGGER = LogManager.getLogger(MOD_ID);
+
+    @SidedProxy(clientSide = "pw.aaron1011.simpleenergy.proxy.client.ClientProxy", serverSide = "pw.aaron1011.simpleenergy.proxy.server.ServerProxy")
+    public static Proxy PROXY;
 
     @Mod.Instance(MOD_ID)
     public static SimpleEnergy INSTANCE;
@@ -49,6 +54,7 @@ public class SimpleEnergy {
         @SubscribeEvent
         public static void addItems(RegistryEvent.Register<Item> event) {
             Items.init(event.getRegistry());
+            PROXY.addItems(event.getRegistry());
         }
     }
 }

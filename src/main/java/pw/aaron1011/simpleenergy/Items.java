@@ -22,7 +22,6 @@ public class Items {
         creativeEnergy = (ItemBlock) new ItemBlock(Blocks.creativeEnergy).setRegistryName(Blocks.creativeEnergy.getRegistryName()).setHasSubtypes(false).setMaxDamage(0);
 
         registry.register(Items.creativeEnergy);
-        ModelLoader.setCustomModelResourceLocation(Items.creativeEnergy, 0, new ModelResourceLocation(Items.creativeEnergy.getRegistryName(), "inventory"));
     }
 
 }
